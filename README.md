@@ -13,22 +13,6 @@ This project focuses on analyzing an insurance dataset to uncover patterns in ri
 
 ---
 
-## 📁 Repository Structure
-insurance-risk-eda/
-├── data/
-│ └── testdatacsv.csv # Raw dataset
-├── eda.py # Main EDA script
-├── .github/
-│ └── workflows/
-│ └── python-ci.yml # GitHub Actions workflow
-├── plots/
-│ ├── plot1_totalpremium_dist.png
-│ ├── plot2_customvalue_outliers.png
-│ └── ... # Additional visual outputs
-├── README.md
-└── requirements.txt
-
-
 ## 🛠️ Setup Instructions
 
 ### 1. Clone the Repository
