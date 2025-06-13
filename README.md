@@ -26,6 +26,38 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 ## Install Dependencies
 pip install -r requirements.txt
 
-Running the Analysis
+
+# Reproducible and Auditable Data Pipeline using DVC
+
+This project demonstrates how to establish a **reproducible and auditable data pipeline** using **Data Version Control (DVC)**—a critical best practice in regulated industries such as **finance** and **insurance**.
+
+DVC ensures data inputs are version-controlled just like code, supporting compliance, auditability, debugging, and reproducibility of all data science workflows.
+
+---
+
+## 📌 Objectives
+
+- Ensure all data and models are fully versioned and auditable.
+- Enable reproducibility of results for regulators, stakeholders, or debugging purposes.
+- Provide a local remote storage setup to simulate data sharing and collaboration.
+
+---
+
+## 🔧 Requirements
+
+- Python (>=3.6)
+- Git
+- [DVC](https://dvc.org/doc/install) (Data Version Control)
+
+---
+
+## 🚀 Setup Instructions
+
+### 1. Install DVC
+
+Install DVC via pip:
+
+```bash
+pip install dvc
 
 
