@@ -1,0 +1,4 @@
+[core]
+    remote = users/administrator/desktop/10
+['remote "users/administrator/desktop/10"']
+    url = ../Acadamy/week3/DvcStorage
