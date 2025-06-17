@@ -121,3 +121,70 @@ Gender is not a statistically justified segmentation feature.
 Margin insights can feed directly into pricing strategy refinement.
 Results support a region-driven pricing model as a next step in modeling.
 
+# Predictive Modeling for Risk-Based Insurance Pricing
+
+## 🔍 Overview
+
+Task 4 focuses on building and evaluating predictive models to support a dynamic, risk-based pricing system in the insurance domain. This task builds upon prior statistical insights to develop machine learning models that estimate:
+
+- **Claim Severity** – How much a customer is likely to claim.
+- **Claim Probability** – The likelihood that a customer will make a claim.
+- **Premium Optimization** – Data-driven estimation of appropriate premiums.
+
+The final output supports strategic decision-making for pricing, segmentation, and customer risk profiling.
+
+## 🧠 Modeling Goals
+
+1. **Claim Severity Prediction (Regression)**
+   - **Target**: `TotalClaims` (only where claims > 0)
+   - **Models**: Linear Regression, Random Forest, XGBoost
+   - **Metrics**: RMSE, R²
+
+2. **Claim Probability Prediction (Classification)**
+   - **Target**: `ClaimIndicator` (binary: 0/1)
+   - **Models**: Logistic Regression, Random Forest, XGBoost
+   - **Metrics**: Accuracy, Precision, Recall, F1-score
+
+3. **Premium Prediction (Regression)**
+   - **Target**: `CalculatedPremiumPerTerm`
+   - **Approach**: Regression models on cleaned features
+
+---
+
+## 🛠️ Methodology
+
+### ✅ Data Preparation
+- Handled missing values through imputation or exclusion.
+- One-hot encoded categorical variables (`Province`, `PostalCode`, `Gender`).
+- Normalized numerical features for specific models (e.g., XGBoost).
+- Applied 80/20 train-test split using stratification.
+
+### 🧪 Modeling Techniques
+- Baseline: Linear Regression, Logistic Regression
+- Tree-based: Decision Trees, Random Forest
+- Boosted: XGBoost
+- Model tuning with `GridSearchCV` and `RandomizedSearchCV`
+
+### 📈 Evaluation
+- Regression: RMSE, R²
+- Classification: Accuracy, Precision, Recall, F1-score, Confusion Matrix
+- Visuals: Residual plots, ROC curve, Precision-Recall curve
+
+---
+
+## 🔍 Model Interpretability
+
+Used **SHAP** to explain predictions and feature impact:
+
+- Top features influencing severity: `VehicleAge`, `Province`, `DriverAge`, `PolicyDuration`
+- Example Insight: “For each additional year of vehicle age, predicted claims increase by X.”
+
+---
+
+## 📌 How to Run
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/yourusername/task4-risk-pricing.git
+   cd task4-risk-pricing
+
