@@ -3,3 +3,6 @@ seaborn
 numpy
 dvc
 scipy
+sklearn
+shap
+xgboost
